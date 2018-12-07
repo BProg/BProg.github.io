@@ -11,21 +11,15 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "even"
+theme = "hyde"
+
+title = "io.Think"
+description = "”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine"
 
 [extra]
 # Put all your custom variables here
 
-# This is the default menu
-even_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/about", name = "Author"},
+hyde_sticky = true
+hyde_links = [
+    { url = "mailto:ostafi_ion@yahoo.com", name = "ostafi_ion@yahoo.com" },
 ]
-
-taxonomies = [
-    # You can enable/disable RSS
-    {name = "categories", rss = true},
-    {name = "tags", rss = true},
-]
-
-even_title = "[icraftcode]()"
