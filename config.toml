@@ -13,8 +13,9 @@ build_search_index = true
 
 theme = "hyde"
 
-title = "io.Think"
+title = "Ion Ostafi"
 description = "”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine"
+default_language = "en"
 
 [extra]
 # Put all your custom variables here
