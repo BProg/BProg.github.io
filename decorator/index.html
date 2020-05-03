@@ -5,9 +5,10 @@
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
       <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
-      <title>io.Think</title>
+      <title>Ion Ostafi</title>
 
       <!-- CSS -->
       <link rel="stylesheet" href="https:&#x2F;&#x2F;bprog.github.io&#x2F;print.css" media="print">
@@ -27,7 +28,7 @@
                 <div class="container sidebar-sticky">
                     <div class="sidebar-about">
                         
-                            <a href="https:&#x2F;&#x2F;bprog.github.io"><h1>io.Think</h1></a>
+                            <a href="https:&#x2F;&#x2F;bprog.github.io"><h1>Ion Ostafi</h1></a>
                             
                             <p class="lead">”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine</p>
                             
@@ -74,146 +75,146 @@ When any of this buttons are focused - background is colored in a color (yellow)
 <p><em>You can follow in code using https://www.typescriptlang.org/play/. The following code is written in typescript</em>.</p>
 <h4 id="components-used-in-code">Components used in code</h4>
 <p>Secondary components used by buttons and decorator.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">interface </span><span style="background-color:#2b303b;color:#c0c5ce;">Displayable {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">();
-</span><span style="background-color:#2b303b;color:#c0c5ce;">}
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">TextView </span><span style="background-color:#2b303b;color:#b48ead;">implements </span><span style="background-color:#2b303b;color:#a3be8c;">Displayable </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">() </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#ebcb8b;">console</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#96b5b4;">log</span><span style="background-color:#2b303b;color:#eff1f5;">(</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#a3be8c;">&lt;TextView&gt;</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">};
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">Picture </span><span style="background-color:#2b303b;color:#b48ead;">implements </span><span style="background-color:#2b303b;color:#a3be8c;">Displayable </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">() </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#ebcb8b;">console</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#96b5b4;">log</span><span style="background-color:#2b303b;color:#eff1f5;">(</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#a3be8c;">&lt;Picture&gt;</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#eff1f5;">)
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">};
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">Box </span><span style="background-color:#2b303b;color:#b48ead;">implements </span><span style="background-color:#2b303b;color:#a3be8c;">Displayable </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">() </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#ebcb8b;">console</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#96b5b4;">log</span><span style="background-color:#2b303b;color:#eff1f5;">(</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#a3be8c;">&lt;Box&gt;</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#eff1f5;">)
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">interface </span><span style="color:#c0c5ce;">Displayable {
+    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">();
+}
+
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">TextView </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
+    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
+        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;TextView&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">);
+    };
+}
+
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">Picture </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
+    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
+        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;Picture&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+    };
+}
+
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">Box </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
+    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
+        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;Box&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+    }
+}
 </span></pre><h4 id="abstractbutton">AbstractButton</h4>
 <p>The AbstractComponent class, it is the base for concrete buttons and decorators. BorderButtonDecorator is an AbstractButton, and it sounds strange, this is how this pattern works.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">abstract class </span><span style="background-color:#2b303b;color:#ebcb8b;">AbstractButton </span><span style="background-color:#2b303b;color:#b48ead;">implements </span><span style="background-color:#2b303b;color:#a3be8c;">Displayable </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">() </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#ebcb8b;">console</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#96b5b4;">log</span><span style="background-color:#2b303b;color:#eff1f5;">(</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#a3be8c;">&lt;AbstractButton&gt;</span><span style="background-color:#2b303b;color:#c0c5ce;">&quot;</span><span style="background-color:#2b303b;color:#eff1f5;">)
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">abstract class </span><span style="color:#ebcb8b;">AbstractButton </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
+        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;AbstractButton&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+    }
+}
 </span></pre><h4 id="pushbutton">PushButton</h4>
 <p>A concrete button, It extends AbstractButton class, and overrides <code>display</code> function to render what is specific to it.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">PushButton </span><span style="background-color:#2b303b;color:#b48ead;">extends </span><span style="background-color:#2b303b;color:#a3be8c;">AbstractButton </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">textView</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">TextView </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">TextView();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">iconView</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">Picture </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">Picture();
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">textView</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">iconView</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">PushButton </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">AbstractButton </span><span style="color:#eff1f5;">{
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">textView</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">TextView </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">TextView();
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">iconView</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">Picture </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">Picture();
+
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">textView</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">iconView</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    }
+}
 </span></pre><h4 id="abstractdecorator">AbstractDecorator</h4>
 <p>The base class for all other decorators, it extends the AbstractButton and also has reference to an AbstractButton object.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">abstract class </span><span style="background-color:#2b303b;color:#ebcb8b;">ButtonDecorator </span><span style="background-color:#2b303b;color:#b48ead;">extends </span><span style="background-color:#2b303b;color:#a3be8c;">AbstractButton </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">constructor</span><span style="background-color:#2b303b;color:#c0c5ce;">(</span><span style="background-color:#2b303b;color:#b48ead;">protected </span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">AbstractButton</span><span style="background-color:#2b303b;color:#c0c5ce;">) </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">super</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">abstract class </span><span style="color:#ebcb8b;">ButtonDecorator </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">AbstractButton </span><span style="color:#eff1f5;">{
+    </span><span style="color:#b48ead;">constructor</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">protected </span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">AbstractButton</span><span style="color:#c0c5ce;">) </span><span style="color:#eff1f5;">{
+        </span><span style="color:#bf616a;">super</span><span style="color:#eff1f5;">();
+    }
+
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    }
+}
 </span></pre><h4 id="borderdecorator">BorderDecorator</h4>
 <p>A concrete decorator that extends <code>ButtonDecorator</code> and overrides the <code>display</code> function to render a border. In this case, border is rendered before button is rendered, but it doesn't mean it should be always this way.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">ButtonBorderDecorator </span><span style="background-color:#2b303b;color:#b48ead;">extends </span><span style="background-color:#2b303b;color:#a3be8c;">ButtonDecorator </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">border</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">Box </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">Box();
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">() </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.border.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">super</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">ButtonBorderDecorator </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">ButtonDecorator </span><span style="color:#eff1f5;">{
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">border</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">Box </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">Box();
+
+    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.border.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+        </span><span style="color:#bf616a;">super</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    }
+}
 </span></pre><h4 id="usageexample">UsageExample</h4>
 <p>You create a push button, then you create a decorator, sending push button in constructor. And in the end you call <code>display</code> on the decorator component.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">let </span><span style="background-color:#2b303b;color:#bf616a;">pushButton </span><span style="background-color:#2b303b;color:#c0c5ce;">= new PushButton();
-</span><span style="background-color:#2b303b;color:#b48ead;">let </span><span style="background-color:#2b303b;color:#bf616a;">pushButtonWithBorder </span><span style="background-color:#2b303b;color:#c0c5ce;">= new ButtonBorderDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">pushButton</span><span style="background-color:#2b303b;color:#c0c5ce;">);
-</span><span style="background-color:#2b303b;color:#bf616a;">pushButtonWithBorder</span><span style="background-color:#2b303b;color:#c0c5ce;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#c0c5ce;">();
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let </span><span style="color:#bf616a;">pushButton </span><span style="color:#c0c5ce;">= new PushButton();
+</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">pushButtonWithBorder </span><span style="color:#c0c5ce;">= new ButtonBorderDecorator(</span><span style="color:#bf616a;">pushButton</span><span style="color:#c0c5ce;">);
+</span><span style="color:#bf616a;">pushButtonWithBorder</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">();
 </span></pre>
 <p>The following log should be visible in console</p>
 <p><em>press 'Run' button top right, after a new empty window is opened, right-click &gt; inspect element &gt; console</em></p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#c0c5ce;">&lt;Box&gt;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">&lt;TextView&gt;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">&lt;Picture&gt;
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">&lt;Box&gt;
+&lt;TextView&gt;
+&lt;Picture&gt;
 </span></pre><h4 id="more-complex-situations">More complex situations</h4>
 <p>This looks like a correct implementation of the decorator pattern, but using this solution, there are some disadvantages when using the button and decorators. When you will need to modify some properties inside button, or in a decorator, you need to keep references to all decorators and buttons. This will make code look pretty bad.</p>
 <p>Imagine a more complex example like the following.(<em>It will not compile because <code>BackgroundButtonDecorator</code> doesn't exists, but you can easily create one cloning the <code>BorderButtonDecorator</code></em>)</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">LoginDialog </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">loginButton </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">PushButton();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">registerButton </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">PushButton();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">forgotPasswordButton </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">PushButton();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">loginBorder</span><span style="background-color:#2b303b;color:#c0c5ce;">?: </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">registerBorder</span><span style="background-color:#2b303b;color:#c0c5ce;">?: </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#bf616a;">forgotPasswordBackground</span><span style="background-color:#2b303b;color:#c0c5ce;">?: </span><span style="background-color:#2b303b;color:#eff1f5;">BackgroundButtonDecorator;
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#8fa1b3;">render</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">loginBorder </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">loginButton</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">registerBorder </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">registerButton</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">forgotPasswordBackground </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">BackgroundButtonDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">forgotPasswordButton</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">loginBorder</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">registerBorder</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">display</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">forgotPasswordBackground</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">render</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">LoginDialog </span><span style="color:#eff1f5;">{
+    </span><span style="color:#bf616a;">loginButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
+    </span><span style="color:#bf616a;">registerButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
+    </span><span style="color:#bf616a;">forgotPasswordButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
+    </span><span style="color:#bf616a;">loginBorder</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
+    </span><span style="color:#bf616a;">registerBorder</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
+    </span><span style="color:#bf616a;">forgotPasswordBackground</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">BackgroundButtonDecorator;
+
+    </span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginBorder </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginButton</span><span style="color:#eff1f5;">);
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerBorder </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerButton</span><span style="color:#eff1f5;">);
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordBackground </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">BackgroundButtonDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordButton</span><span style="color:#eff1f5;">);
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginBorder</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerBorder</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordBackground</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#eff1f5;">();
+    }
+}
 </span></pre>
 <p>To solve this problem, there should be another class that encapsulates and hides logic of creating buttons with decorators.</p>
 <h4 id="decoratedbutton">DecoratedButton</h4>
 <p>A facade class that provides a single place to create and control button + decorators. <code>Facade</code> is just another OOP pattern</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">interface </span><span style="background-color:#2b303b;color:#c0c5ce;">IButtonConstructor&lt;T&gt; {
-</span><span style="background-color:#2b303b;color:#c0c5ce;">    </span><span style="background-color:#2b303b;color:#c0c5ce;">new(): T;
-</span><span style="background-color:#2b303b;color:#c0c5ce;">}
-</span><span style="background-color:#2b303b;color:#c0c5ce;">
-</span><span style="background-color:#2b303b;color:#b48ead;">class </span><span style="background-color:#2b303b;color:#ebcb8b;">DecoratedButton</span><span style="background-color:#2b303b;color:#eff1f5;">&lt;ButtonType </span><span style="background-color:#2b303b;color:#b48ead;">extends </span><span style="background-color:#2b303b;color:#eff1f5;">AbstractButton&gt; {
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonType; </span><span style="background-color:#2b303b;color:#65737e;">// PushButton or SwitchButton
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">borderDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">?: </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">backgroundDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">?: </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBackgroundDecorator;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">private </span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">AbstractButton;
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">constructor</span><span style="background-color:#2b303b;color:#c0c5ce;">(</span><span style="background-color:#2b303b;color:#bf616a;">buttonCtor</span><span style="background-color:#2b303b;color:#c0c5ce;">: </span><span style="background-color:#2b303b;color:#eff1f5;">IButtonConstructor&lt;ButtonType&gt;</span><span style="background-color:#2b303b;color:#c0c5ce;">) </span><span style="background-color:#2b303b;color:#eff1f5;">{
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">button </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">buttonCtor();
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration </span><span style="background-color:#2b303b;color:#c0c5ce;">= </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#eff1f5;">;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">addBorderDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">borderDecorator </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBorderDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration </span><span style="background-color:#2b303b;color:#c0c5ce;">= </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">borderDecorator</span><span style="background-color:#2b303b;color:#eff1f5;">;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">addBackgroundDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">backgroundDecorator </span><span style="background-color:#2b303b;color:#c0c5ce;">= new </span><span style="background-color:#2b303b;color:#eff1f5;">ButtonBackgroundDecorator(</span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration</span><span style="background-color:#2b303b;color:#eff1f5;">);
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration </span><span style="background-color:#2b303b;color:#c0c5ce;">= </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">backgroundDecorator</span><span style="background-color:#2b303b;color:#eff1f5;">;
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#b48ead;">public </span><span style="background-color:#2b303b;color:#8fa1b3;">render</span><span style="background-color:#2b303b;color:#c0c5ce;">(): </span><span style="background-color:#2b303b;color:#eff1f5;">void {
-</span><span style="background-color:#2b303b;color:#eff1f5;">        </span><span style="background-color:#2b303b;color:#bf616a;">this</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#bf616a;">finalDecoration</span><span style="background-color:#2b303b;color:#eff1f5;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">render</span><span style="background-color:#2b303b;color:#eff1f5;">();
-</span><span style="background-color:#2b303b;color:#eff1f5;">    </span><span style="background-color:#2b303b;color:#eff1f5;">}
-</span><span style="background-color:#2b303b;color:#eff1f5;">}
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">interface </span><span style="color:#c0c5ce;">IButtonConstructor&lt;T&gt; {
+    new(): T;
+}
+
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">DecoratedButton</span><span style="color:#eff1f5;">&lt;ButtonType </span><span style="color:#b48ead;">extends </span><span style="color:#eff1f5;">AbstractButton&gt; {
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">ButtonType; </span><span style="color:#65737e;">// PushButton or SwitchButton
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">borderDecorator</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">backgroundDecorator</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBackgroundDecorator;
+    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">finalDecoration</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">AbstractButton;
+
+    </span><span style="color:#b48ead;">constructor</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">buttonCtor</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">IButtonConstructor&lt;ButtonType&gt;</span><span style="color:#c0c5ce;">) </span><span style="color:#eff1f5;">{
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">buttonCtor();
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button</span><span style="color:#eff1f5;">;
+    }
+
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">addBorderDecorator</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">borderDecorator </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">);
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">borderDecorator</span><span style="color:#eff1f5;">;
+    }
+
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">addBackgroundDecorator</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">backgroundDecorator </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBackgroundDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">);
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">backgroundDecorator</span><span style="color:#eff1f5;">;
+    }
+
+    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
+        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#eff1f5;">();
+    }
+}
 </span></pre>
 <p>Now whenever you will need to create a button, the code would look like this. And the result should be same.</p>
-<pre style="background-color:#2b303b">
-<span style="background-color:#2b303b;color:#b48ead;">let </span><span style="background-color:#2b303b;color:#bf616a;">button </span><span style="background-color:#2b303b;color:#c0c5ce;">= new DecoratedButton(</span><span style="background-color:#2b303b;color:#bf616a;">PushButton</span><span style="background-color:#2b303b;color:#c0c5ce;">);
-</span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#c0c5ce;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">addBorderDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">();
-</span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#c0c5ce;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">addBackgroundDecorator</span><span style="background-color:#2b303b;color:#c0c5ce;">();
-</span><span style="background-color:#2b303b;color:#bf616a;">button</span><span style="background-color:#2b303b;color:#c0c5ce;">.</span><span style="background-color:#2b303b;color:#8fa1b3;">render</span><span style="background-color:#2b303b;color:#c0c5ce;">();
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">let </span><span style="color:#bf616a;">button </span><span style="color:#c0c5ce;">= new DecoratedButton(</span><span style="color:#bf616a;">PushButton</span><span style="color:#c0c5ce;">);
+</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">addBorderDecorator</span><span style="color:#c0c5ce;">();
+</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">addBackgroundDecorator</span><span style="color:#c0c5ce;">();
+</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">();
 </span></pre><h4 id="conclusion">Conclusion</h4>
 <p>There are many advantages of using this pattern:</p>
 <ul>
