@@ -79,6 +79,8 @@ I created a demo project named [NavBarLargeTitle](https://github.com/BProg/NavBa
 
 ## Notes
 
+This could work with a custom `UINavigationBar` and custom `UINavigationItem`, but I haven't tested it
+
 ### Green 🍀
 
 I tested the solution in iOS 15,14,13 simulators - it works.
@@ -86,9 +88,5 @@ I tested the solution in iOS 15,14,13 simulators - it works.
 ### Red 🐞
 
 The interactive back animation is not perfect in the demo project, I haven't gone further to dig into this problem.
-
-### Gray
-
-This could work with a custom `UINavigationBar` and custom `UINavigationItem`, but I haven't tested it
 
 We can't rely on Apple's hidden API because it can break with any new release.
