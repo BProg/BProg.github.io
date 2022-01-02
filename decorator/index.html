@@ -11,9 +11,9 @@
       <title>Ion Ostafi</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;bprog.github.io&#x2F;print.css" media="print">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;bprog.github.io&#x2F;poole.css">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;bprog.github.io&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://bprog.github.io/print.css" media="print">
+      <link rel="stylesheet" href="https://bprog.github.io/poole.css">
+      <link rel="stylesheet" href="https://bprog.github.io/hyde.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
       
@@ -75,147 +75,144 @@ When any of this buttons are focused - background is colored in a color (yellow)
 <p><em>You can follow in code using https://www.typescriptlang.org/play/. The following code is written in typescript</em>.</p>
 <h4 id="components-used-in-code">Components used in code</h4>
 <p>Secondary components used by buttons and decorator.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">interface </span><span style="color:#c0c5ce;">Displayable {
-    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">();
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">interface Displayable {
+    display();
 }
 
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">TextView </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
-    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
-        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;TextView&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">);
+class TextView implements Displayable {
+    display() {
+        console.log(&quot;&lt;TextView&gt;&quot;);
     };
 }
 
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">Picture </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
-    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
-        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;Picture&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+class Picture implements Displayable {
+    display() {
+        console.log(&quot;&lt;Picture&gt;&quot;)
     };
 }
 
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">Box </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
-    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
-        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;Box&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+class Box implements Displayable {
+    display() {
+        console.log(&quot;&lt;Box&gt;&quot;)
     }
 }
-</span></pre><h4 id="abstractbutton">AbstractButton</h4>
+</code></pre>
+<h4 id="abstractbutton">AbstractButton</h4>
 <p>The AbstractComponent class, it is the base for concrete buttons and decorators. BorderButtonDecorator is an AbstractButton, and it sounds strange, this is how this pattern works.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">abstract class </span><span style="color:#ebcb8b;">AbstractButton </span><span style="color:#b48ead;">implements </span><span style="color:#a3be8c;">Displayable </span><span style="color:#eff1f5;">{
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
-        </span><span style="color:#ebcb8b;">console</span><span style="color:#eff1f5;">.</span><span style="color:#96b5b4;">log</span><span style="color:#eff1f5;">(</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">&lt;AbstractButton&gt;</span><span style="color:#c0c5ce;">&quot;</span><span style="color:#eff1f5;">)
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">abstract class AbstractButton implements Displayable {
+    public display() {
+        console.log(&quot;&lt;AbstractButton&gt;&quot;)
     }
 }
-</span></pre><h4 id="pushbutton">PushButton</h4>
+</code></pre>
+<h4 id="pushbutton">PushButton</h4>
 <p>A concrete button, It extends AbstractButton class, and overrides <code>display</code> function to render what is specific to it.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">PushButton </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">AbstractButton </span><span style="color:#eff1f5;">{
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">textView</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">TextView </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">TextView();
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">iconView</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">Picture </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">Picture();
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">class PushButton extends AbstractButton {
+    private textView: TextView = new TextView();
+    private iconView: Picture = new Picture();
 
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">textView</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">iconView</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    public display(): void {
+        this.textView.display();
+        this.iconView.display();
     }
 }
-</span></pre><h4 id="abstractdecorator">AbstractDecorator</h4>
+</code></pre>
+<h4 id="abstractdecorator">AbstractDecorator</h4>
 <p>The base class for all other decorators, it extends the AbstractButton and also has reference to an AbstractButton object.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">abstract class </span><span style="color:#ebcb8b;">ButtonDecorator </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">AbstractButton </span><span style="color:#eff1f5;">{
-    </span><span style="color:#b48ead;">constructor</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">protected </span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">AbstractButton</span><span style="color:#c0c5ce;">) </span><span style="color:#eff1f5;">{
-        </span><span style="color:#bf616a;">super</span><span style="color:#eff1f5;">();
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">abstract class ButtonDecorator extends AbstractButton {
+    constructor(protected button: AbstractButton) {
+        super();
     }
 
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    public display(): void {
+        this.button.display();
     }
 }
-</span></pre><h4 id="borderdecorator">BorderDecorator</h4>
+</code></pre>
+<h4 id="borderdecorator">BorderDecorator</h4>
 <p>A concrete decorator that extends <code>ButtonDecorator</code> and overrides the <code>display</code> function to render a border. In this case, border is rendered before button is rendered, but it doesn't mean it should be always this way.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">ButtonBorderDecorator </span><span style="color:#b48ead;">extends </span><span style="color:#a3be8c;">ButtonDecorator </span><span style="color:#eff1f5;">{
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">border</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">Box </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">Box();
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">class ButtonBorderDecorator extends ButtonDecorator {
+    private border: Box = new Box();
 
-    </span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">() </span><span style="color:#eff1f5;">{
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.border.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
-        </span><span style="color:#bf616a;">super</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
+    display() {
+        this.border.display();
+        super.display();
     }
 }
-</span></pre><h4 id="usageexample">UsageExample</h4>
+</code></pre>
+<h4 id="usageexample">UsageExample</h4>
 <p>You create a push button, then you create a decorator, sending push button in constructor. And in the end you call <code>display</code> on the decorator component.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let </span><span style="color:#bf616a;">pushButton </span><span style="color:#c0c5ce;">= new PushButton();
-</span><span style="color:#b48ead;">let </span><span style="color:#bf616a;">pushButtonWithBorder </span><span style="color:#c0c5ce;">= new ButtonBorderDecorator(</span><span style="color:#bf616a;">pushButton</span><span style="color:#c0c5ce;">);
-</span><span style="color:#bf616a;">pushButtonWithBorder</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#c0c5ce;">();
-</span></pre>
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">let pushButton = new PushButton();
+let pushButtonWithBorder = new ButtonBorderDecorator(pushButton);
+pushButtonWithBorder.display();
+</code></pre>
 <p>The following log should be visible in console</p>
 <p><em>press 'Run' button top right, after a new empty window is opened, right-click &gt; inspect element &gt; console</em></p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">&lt;Box&gt;
+<pre data-lang="sh" class="language-sh "><code class="language-sh" data-lang="sh">&lt;Box&gt;
 &lt;TextView&gt;
 &lt;Picture&gt;
-</span></pre><h4 id="more-complex-situations">More complex situations</h4>
+</code></pre>
+<h4 id="more-complex-situations">More complex situations</h4>
 <p>This looks like a correct implementation of the decorator pattern, but using this solution, there are some disadvantages when using the button and decorators. When you will need to modify some properties inside button, or in a decorator, you need to keep references to all decorators and buttons. This will make code look pretty bad.</p>
 <p>Imagine a more complex example like the following.(<em>It will not compile because <code>BackgroundButtonDecorator</code> doesn't exists, but you can easily create one cloning the <code>BorderButtonDecorator</code></em>)</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">LoginDialog </span><span style="color:#eff1f5;">{
-    </span><span style="color:#bf616a;">loginButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
-    </span><span style="color:#bf616a;">registerButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
-    </span><span style="color:#bf616a;">forgotPasswordButton </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">PushButton();
-    </span><span style="color:#bf616a;">loginBorder</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
-    </span><span style="color:#bf616a;">registerBorder</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
-    </span><span style="color:#bf616a;">forgotPasswordBackground</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">BackgroundButtonDecorator;
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">class LoginDialog {
+    loginButton = new PushButton();
+    registerButton = new PushButton();
+    forgotPasswordButton = new PushButton();
+    loginBorder?: ButtonBorderDecorator;
+    registerBorder?: ButtonBorderDecorator;
+    forgotPasswordBackground?: BackgroundButtonDecorator;
 
-    </span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginBorder </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginButton</span><span style="color:#eff1f5;">);
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerBorder </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerButton</span><span style="color:#eff1f5;">);
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordBackground </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">BackgroundButtonDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordButton</span><span style="color:#eff1f5;">);
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">loginBorder</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">registerBorder</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">display</span><span style="color:#eff1f5;">();
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">forgotPasswordBackground</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#eff1f5;">();
+    render(): void {
+        this.loginBorder = new ButtonBorderDecorator(this.loginButton);
+        this.registerBorder = new ButtonBorderDecorator(this.registerButton);
+        this.forgotPasswordBackground = new BackgroundButtonDecorator(this.forgotPasswordButton);
+        this.loginBorder.display();
+        this.registerBorder.display();
+        this.forgotPasswordBackground.render();
     }
 }
-</span></pre>
+</code></pre>
 <p>To solve this problem, there should be another class that encapsulates and hides logic of creating buttons with decorators.</p>
 <h4 id="decoratedbutton">DecoratedButton</h4>
 <p>A facade class that provides a single place to create and control button + decorators. <code>Facade</code> is just another OOP pattern</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">interface </span><span style="color:#c0c5ce;">IButtonConstructor&lt;T&gt; {
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">interface IButtonConstructor&lt;T&gt; {
     new(): T;
 }
 
-</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">DecoratedButton</span><span style="color:#eff1f5;">&lt;ButtonType </span><span style="color:#b48ead;">extends </span><span style="color:#eff1f5;">AbstractButton&gt; {
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">ButtonType; </span><span style="color:#65737e;">// PushButton or SwitchButton
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">borderDecorator</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBorderDecorator;
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">backgroundDecorator</span><span style="color:#c0c5ce;">?: </span><span style="color:#eff1f5;">ButtonBackgroundDecorator;
-    </span><span style="color:#b48ead;">private </span><span style="color:#bf616a;">finalDecoration</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">AbstractButton;
+class DecoratedButton&lt;ButtonType extends AbstractButton&gt; {
+    private button: ButtonType; &#x2F;&#x2F; PushButton or SwitchButton
+    private borderDecorator?: ButtonBorderDecorator;
+    private backgroundDecorator?: ButtonBackgroundDecorator;
+    private finalDecoration: AbstractButton;
 
-    </span><span style="color:#b48ead;">constructor</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">buttonCtor</span><span style="color:#c0c5ce;">: </span><span style="color:#eff1f5;">IButtonConstructor&lt;ButtonType&gt;</span><span style="color:#c0c5ce;">) </span><span style="color:#eff1f5;">{
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">buttonCtor();
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">button</span><span style="color:#eff1f5;">;
+    constructor(buttonCtor: IButtonConstructor&lt;ButtonType&gt;) {
+        this.button = new buttonCtor();
+        this.finalDecoration = this.button;
     }
 
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">addBorderDecorator</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">borderDecorator </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBorderDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">);
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">borderDecorator</span><span style="color:#eff1f5;">;
+    public addBorderDecorator(): void {
+        this.borderDecorator = new ButtonBorderDecorator(this.finalDecoration);
+        this.finalDecoration = this.borderDecorator;
     }
 
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">addBackgroundDecorator</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">backgroundDecorator </span><span style="color:#c0c5ce;">= new </span><span style="color:#eff1f5;">ButtonBackgroundDecorator(</span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">);
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration </span><span style="color:#c0c5ce;">= </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">backgroundDecorator</span><span style="color:#eff1f5;">;
+    public addBackgroundDecorator(): void {
+        this.backgroundDecorator = new ButtonBackgroundDecorator(this.finalDecoration);
+        this.finalDecoration = this.backgroundDecorator;
     }
 
-    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">(): </span><span style="color:#eff1f5;">void {
-        </span><span style="color:#bf616a;">this</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">finalDecoration</span><span style="color:#eff1f5;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#eff1f5;">();
+    public render(): void {
+        this.finalDecoration.render();
     }
 }
-</span></pre>
+</code></pre>
 <p>Now whenever you will need to create a button, the code would look like this. And the result should be same.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">let </span><span style="color:#bf616a;">button </span><span style="color:#c0c5ce;">= new DecoratedButton(</span><span style="color:#bf616a;">PushButton</span><span style="color:#c0c5ce;">);
-</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">addBorderDecorator</span><span style="color:#c0c5ce;">();
-</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">addBackgroundDecorator</span><span style="color:#c0c5ce;">();
-</span><span style="color:#bf616a;">button</span><span style="color:#c0c5ce;">.</span><span style="color:#8fa1b3;">render</span><span style="color:#c0c5ce;">();
-</span></pre><h4 id="conclusion">Conclusion</h4>
+<pre data-lang="ts" class="language-ts "><code class="language-ts" data-lang="ts">let button = new DecoratedButton(PushButton);
+button.addBorderDecorator();
+button.addBackgroundDecorator();
+button.render();
+</code></pre>
+<h4 id="conclusion">Conclusion</h4>
 <p>There are many advantages of using this pattern:</p>
 <ul>
 <li>Decorator pattern is a good way to make code follow open-closed principle: code for new decorations, will not be added in any of current classes, but a new class will be created.</li>
