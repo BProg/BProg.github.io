@@ -18,9 +18,9 @@ description = "”Programming isn’t about what you know; it’s about what you
 default_language = "en"
 
 [extra]
-# Put all your custom variables here
-
 hyde_sticky = true
 hyde_links = [
-    { url = "mailto:ostafi_ion@yahoo.com", name = "ostafi_ion@yahoo.com" },
+    {url = "mailto:ostafi_ion@yahoo.com", name = "ostafi_ion@yahoo.com"},
+    {url = "https://twitter.com/i_ostafi", name = "twitter"},
+    {url = "https://github.com/BProg", name="github"}
 ]
