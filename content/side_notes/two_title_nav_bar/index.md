@@ -2,20 +2,19 @@
 title = "The hidden UINavigationBar property - large title two line mode"
 date = 2020-12-28
 description = "-"
-
-[taxonomies]
-categories = ["programming"]
-tags = ["iOS", "hacks"]
 +++
 
 ## ToC
 
-1. [Background](#background)
-1. [Community solutions](#community-solutions)
-1. [Reverse engineering](#reverse-engineering)
-1. [Demo project](#demo-project)
-1. [The Solution](#the-solution)
-1. [Notes](#notes)
+- [ToC](#toc)
+- [Background](#background)
+- [Community solutions](#community-solutions)
+- [Reverse engineering](#reverse-engineering)
+- [Demo project](#demo-project)
+- [The Solution](#the-solution)
+- [Notes](#notes)
+  - [Good](#good)
+  - [Bad](#bad)
 
 ## Background
 
@@ -80,11 +79,11 @@ I created a demo project named [NavBarLargeTitle](https://github.com/BProg/NavBa
 
 I haven't tested every possible way to set the hidden `__largeTitleTwoLineMode` variable, and possibly, variable could be set in any place before the item is added to the `UINavigationBar`
 
-### Green 🍀
+### Good
 
 Compatibility - the current solution works at least with iOS 15, 14, 13
 
-### Red 🐞
+### Bad
 
 Animation - the interactive back animation is not perfect in the demo project, I haven't gone further to dig into this problem.
 

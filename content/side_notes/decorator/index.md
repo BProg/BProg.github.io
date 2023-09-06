@@ -2,10 +2,6 @@
 title = "Decorator pattern in practice"
 date = 2018-12-03
 description = "Yet another example of implementing Decorator OOP pattern. The examples are from a real project I have worked at."
-
-[taxonomies]
-categories = ["programming"]
-tags = ["patterns", "OOP", "typescript"]
 +++
 
 ### Intro

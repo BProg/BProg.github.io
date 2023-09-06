@@ -1,0 +1,3 @@
+[submodule "toucan"]
+	path = themes/toucan
+	url = https://git.42l.fr/HugoTrentesaux/toucan.git

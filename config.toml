@@ -11,16 +11,14 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
-theme = "hyde"
+theme = "toucan"
 
-title = "Ion Ostafi"
-description = "”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine"
+title = "Engineering software"
+description = "”Programming isn't about what you know; it's about what you can figure out.” - Chris Pine"
 default_language = "en"
 
 [extra]
-hyde_sticky = true
-hyde_links = [
-    {url = "mailto:ostafi_ion@yahoo.com", name = "ostafi_ion@yahoo.com"},
-    {url = "https://twitter.com/i_ostafi", name = "twitter"},
-    {url = "https://github.com/BProg", name="github"}
-]
+title = "Software mushrooms"
+title_pic = "/mushroom.png"
+description = "Programming isn't about what you know; it's about what you can figure out."
+
