@@ -1,71 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The hidden UINavigationBar property - large title two line mode</title>
+  <meta name="description" content="-">
+  <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
+  
 
-      <!-- Enable responsiveness on mobile devices-->
-      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
-      <title>The hidden UINavigationBar property - large title two line mode</title>
+</head>
+<body>
+  <div id="container">
+    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
+    <nav>
 
-      <!-- CSS -->
-      <link rel="stylesheet" href="https://bprog.github.io/print.css" media="print">
-      <link rel="stylesheet" href="https://bprog.github.io/poole.css">
-      <link rel="stylesheet" href="https://bprog.github.io/hyde.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-      
-
-      
-<meta name="description"
-  content="iOS developer, rust enthusiast. I write about software engineering when I have inspiration and time">
-
-    </head>
-
-    <body class=" ">
-        
-            <div class="sidebar">
-                <div class="container sidebar-sticky">
-                    <div class="sidebar-about">
-                        
-                            <a href="https:&#x2F;&#x2F;bprog.github.io"><h1>Ion Ostafi</h1></a>
-                            
-                            <p class="lead">”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine</p>
-                            
-                        
-                    </div>
-
-                    <ul class="sidebar-nav">
-                        
-                        
-                        <li class="sidebar-nav-item"><a href="mailto:ostafi_ion@yahoo.com">ostafi_ion@yahoo.com</a></li>
-                        
-                        <li class="sidebar-nav-item"><a href="https:&#x2F;&#x2F;twitter.com&#x2F;i_ostafi">twitter</a></li>
-                        
-                        <li class="sidebar-nav-item"><a href="https:&#x2F;&#x2F;github.com&#x2F;BProg">github</a></li>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div class="content container">
-            
-<div class="post">
-  <h1 class="post-title">The hidden UINavigationBar property - large title two line mode</h1>
-  <span class="post-date">2020-12-28</span>
+<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
+    >
+    Sofware architecture
+</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
+    class="active">
+    Side notes
+</a>
+</nav>
+    <main>
+<section class="card page">
+  <div class="date">2020-12-28</div>
+  <h1>The hidden UINavigationBar property - large title two line mode</h1>
   <h2 id="toc">ToC</h2>
-<ol>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#background">Background</a></li>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#community-solutions">Community solutions</a></li>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#reverse-engineering">Reverse engineering</a></li>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#demo-project">Demo project</a></li>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#the-solution">The Solution</a></li>
-<li><a href="https://bprog.github.io/two-title-nav-bar/#notes">Notes</a></li>
-</ol>
+<ul>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#toc">ToC</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#background">Background</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#community-solutions">Community solutions</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#reverse-engineering">Reverse engineering</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#demo-project">Demo project</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#the-solution">The Solution</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#notes">Notes</a>
+<ul>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#good">Good</a></li>
+<li><a href="https://bprog.github.io/side_notes/two-title-nav-bar/#bad">Bad</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="background">Background</h2>
 <p>Back in iOS 11, Apple introduced the <strong>Large Title</strong> feature, which became the usual UI for navigation bars. UIKit framework provides a <a href="https://developer.apple.com/documentation/uikit/uinavigationbar/2908999-preferslargetitles">simple way</a> to enable the new shiny feature. <strong>But</strong>, there is a missing piece in the API: <strong>We can't make a Large title to have two lines of text</strong> (<em>or do we?</em>)</p>
 <h2 id="community-solutions">Community solutions</h2>
@@ -77,20 +53,20 @@
 <p>Based on the <a href="https://stackoverflow.com/questions/47901318/how-to-set-multi-line-large-title-in-navigation-bar-new-feature-of-ios-11">stackoverflow</a> answers, the starting point was to look into the view structure of <code>NavigationBar</code> itself.</p>
 <p>I created a subclass to <code>NavigationBar</code> and put a breakpoint in the function: <code>didAddSubview</code>. I inspected every subview coming as an input parameter to this function. From all subviews, one is named <code>_UINavigationBarLargeTitleView</code> (a private Apple class), and it has a private var named <code>_twoLineMode</code> with a value of <code>0</code> (turned off)!</p>
 <p>Two Line Mode - it is there and I just needed a way to turn it on.</p>
-<p><img src="./_UINavigationBarLargeTitleView.png" alt="private-class" /></p>
+<p><img src="https://bprog.github.io/side_notes/two-title-nav-bar/./_UINavigationBarLargeTitleView.png" alt="private-class" /></p>
 <p>I tried this</p>
 <pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">subview.setValue(1, forKey: &quot;_twoLineMode&quot;)
 </code></pre>
 <p>I tried to set the value in the <code>didAddSubview</code> and <code>willAddSubview</code> functions. None worked 😩, the value was reset somewhere after view was added as subview. After long inspecting and playing around with different variables of the <code>_UINavigationBarLargeTitleView</code> object, I couldn't make it work.</p>
 <p>I needed to find which object is controlling the <code>_twoLineMode</code> var.</p>
 <p><code>UINavigationBar</code> is constructed using <code>UINavigationItem</code>s. To inspect the item, I created a subclass to <code>UINavigationController</code> and overrode function <code>navigationBar(_:shouldPush:)</code> which is a function for <code>UINavigationBar</code>'s delegate. After inspecting this object, I <strong>Found another clue!</strong> Another private var named <code>__largeTitleTwoLineMode</code>, again, with a value of <code>0</code>.
-<img src="__largeTitleTwoLineMode.png" alt="__largeTitleTwoLineMode" /></p>
+<img src="https://bprog.github.io/side_notes/two-title-nav-bar/__largeTitleTwoLineMode.png" alt="__largeTitleTwoLineMode" /></p>
 <p>I set this var to <code>1</code> or <code>true</code> and <strong>HERE IT IS!</strong>. I had a Large Title with two lines 🙌!</p>
 <pre data-lang="swift" class="language-swift "><code class="language-swift" data-lang="swift">item.setValue(1, forKey: &quot;__largeTitleTwoLineMode&quot;)
 &#x2F;&#x2F; OR
 item.setValue(true, forKey: &quot;__largeTitleTwoLineMode&quot;)
 </code></pre>
-<p><img src="./TwoLinesLargeTitle.png" alt="TwoLinesLargeTitle" /></p>
+<p><img src="https://bprog.github.io/side_notes/two-title-nav-bar/./TwoLinesLargeTitle.png" alt="TwoLinesLargeTitle" /></p>
 <h2 id="demo-project">Demo project</h2>
 <p>I created a demo project named <a href="https://github.com/BProg/NavBarLargeTitle">NavBarLargeTitle</a>. The project will list Swift Language Evolution proposals inside the first <code>UIViewController</code> and details in the second. It target iOS 15 and uses some iOS 14 features for configuring the <code>UITableView</code> like <a href="https://developer.apple.com/documentation/uikit/uitableviewcell/3601058-defaultcontentconfiguration">cell configuration</a></p>
 <h2 id="the-solution">The Solution</h2>
@@ -103,16 +79,24 @@ item.setValue(true, forKey: &quot;__largeTitleTwoLineMode&quot;)
 </ol>
 <h2 id="notes">Notes</h2>
 <p>I haven't tested every possible way to set the hidden <code>__largeTitleTwoLineMode</code> variable, and possibly, variable could be set in any place before the item is added to the <code>UINavigationBar</code></p>
-<h3 id="green-four-leaf-clover">Green 🍀</h3>
+<h3 id="good">Good</h3>
 <p>Compatibility - the current solution works at least with iOS 15, 14, 13</p>
-<h3 id="red-beetle">Red 🐞</h3>
+<h3 id="bad">Bad</h3>
 <p>Animation - the interactive back animation is not perfect in the demo project, I haven't gone further to dig into this problem.</p>
 <p>Unreliable - we can't rely on Apple's hidden API because it can break with any new release. But the good thing, is that current solution is so simple that it can easily be updated in such a scenario.</p>
 
+
+  
+  
+</section>
+</main>
+    <footer>
+<div class="card">
+Made with <a href="http://getzola.org/">Zola</a>, static site generator in <a href="https://www.rust-lang.org/">Rust</a>.
 </div>
-
-        </div>
-
-    </body>
-
+<div id="license">Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> Licence | <a href="/rss.xml">RSS</a> flux</div>
+<br>
+</footer>
+  </div>
+</body>
 </html>

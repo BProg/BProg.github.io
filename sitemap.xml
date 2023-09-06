@@ -4,14 +4,21 @@
         <loc>https://bprog.github.io/</loc>
     </url>
     <url>
-        <loc>https://bprog.github.io/decorator/</loc>
+        <loc>https://bprog.github.io/architecture/</loc>
+    </url>
+    <url>
+        <loc>https://bprog.github.io/architecture/part1/</loc>
+        <lastmod>2023-09-06</lastmod>
+    </url>
+    <url>
+        <loc>https://bprog.github.io/side_notes/</loc>
+    </url>
+    <url>
+        <loc>https://bprog.github.io/side_notes/decorator/</loc>
         <lastmod>2018-12-03</lastmod>
     </url>
     <url>
-        <loc>https://bprog.github.io/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://bprog.github.io/two-title-nav-bar/</loc>
+        <loc>https://bprog.github.io/side_notes/two-title-nav-bar/</loc>
         <lastmod>2020-12-28</lastmod>
     </url>
 </urlset>

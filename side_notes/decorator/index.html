@@ -1,83 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decorator pattern in practice</title>
+  <meta name="description" content="Yet another example of implementing Decorator OOP pattern. The examples are from a real project I have worked at.">
+  <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
+  
 
-      <!-- Enable responsiveness on mobile devices-->
-      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
 
-      <title>Decorator pattern in practice</title>
+</head>
+<body>
+  <div id="container">
+    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
+    <nav>
 
-      <!-- CSS -->
-      <link rel="stylesheet" href="https://bprog.github.io/print.css" media="print">
-      <link rel="stylesheet" href="https://bprog.github.io/poole.css">
-      <link rel="stylesheet" href="https://bprog.github.io/hyde.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-      
-
-      
-<meta name="description"
-  content="iOS developer, rust enthusiast. I write about software engineering when I have inspiration and time">
-
-    </head>
-
-    <body class=" ">
-        
-            <div class="sidebar">
-                <div class="container sidebar-sticky">
-                    <div class="sidebar-about">
-                        
-                            <a href="https:&#x2F;&#x2F;bprog.github.io"><h1>Ion Ostafi</h1></a>
-                            
-                            <p class="lead">”Programming isn’t about what you know; it’s about what you can figure out.” - Chris Pine</p>
-                            
-                        
-                    </div>
-
-                    <ul class="sidebar-nav">
-                        
-                        
-                        <li class="sidebar-nav-item"><a href="mailto:ostafi_ion@yahoo.com">ostafi_ion@yahoo.com</a></li>
-                        
-                        <li class="sidebar-nav-item"><a href="https:&#x2F;&#x2F;twitter.com&#x2F;i_ostafi">twitter</a></li>
-                        
-                        <li class="sidebar-nav-item"><a href="https:&#x2F;&#x2F;github.com&#x2F;BProg">github</a></li>
-                        
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div class="content container">
-            
-<div class="post">
-  <h1 class="post-title">Decorator pattern in practice</h1>
-  <span class="post-date">2018-12-03</span>
+<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
+    >
+    Sofware architecture
+</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
+    class="active">
+    Side notes
+</a>
+</nav>
+    <main>
+<section class="card page">
+  <div class="date">2018-12-03</div>
+  <h1>Decorator pattern in practice</h1>
   <h3 id="intro">Intro</h3>
 <p>In this post, you will see yet another implementation of the decorator pattern. This is a real implementation I used in a project, but here, I reduced and simplified the code. Imagine you don't have any css/html, UIKit, or QT framework and need to implement an UI system. In this simple post, you will implement a simple button rendering system based on OOP pattern: <code>Decorator</code>.</p>
 <p>Possible situations</p>
 <ul>
 <li>Button with a text in center and a border
-<img src="./button_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/side_notes/decorator/./button_border.png" alt="decorator-pic" /></li>
 <li>Button with an icon, a text and a border
-<img src="./button_icon_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/side_notes/decorator/./button_icon_border.png" alt="decorator-pic" /></li>
 <li>Button with only a text
-<img src="./button_no_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/side_notes/decorator/./button_no_border.png" alt="decorator-pic" /></li>
 <li>Kind of a radio button, that has the main title and the radio state title (yes / no)
 When any of this buttons are focused - background is colored in a color (yellow), border (if any) should disappear, text should change its color to black.
-<img src="./button_radio_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/side_notes/decorator/./button_radio_border.png" alt="decorator-pic" /></li>
 </ul>
 <p>Next I will try to implement only a part af those requirements, but the implementation will leave space to extend.</p>
 <h3 id="decorator-pattern-diagram">Decorator pattern diagram</h3>
 <p>This is the decorator pattern in theory</p>
-<p><img src="./Decorator_pattern.png" alt="decorator-pic" /></p>
+<p><img src="https://bprog.github.io/side_notes/decorator/./Decorator_pattern.png" alt="decorator-pic" /></p>
 <h3 id="apply-design">Apply design</h3>
 <p>This is how current requirements get designed using decorator pattern</p>
-<p><img src="./Buttons_class.png" alt="decorator-buttons" /></p>
+<p><img src="https://bprog.github.io/side_notes/decorator/./Buttons_class.png" alt="decorator-buttons" /></p>
 <p><em>You can follow in code using https://www.typescriptlang.org/play/. The following code is written in typescript</em>.</p>
 <h4 id="components-used-in-code">Components used in code</h4>
 <p>Secondary components used by buttons and decorator.</p>
@@ -232,10 +202,18 @@ button.render();
 </ul>
 <p>Disadvantages can be hidden inside a <code>facade</code> object, and expose a simple interface to the client.</p>
 
+
+  
+  
+</section>
+</main>
+    <footer>
+<div class="card">
+Made with <a href="http://getzola.org/">Zola</a>, static site generator in <a href="https://www.rust-lang.org/">Rust</a>.
 </div>
-
-        </div>
-
-    </body>
-
+<div id="license">Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> Licence | <a href="/rss.xml">RSS</a> flux</div>
+<br>
+</footer>
+  </div>
+</body>
 </html>
