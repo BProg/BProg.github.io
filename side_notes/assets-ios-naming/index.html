@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Image assets organisation in an iOS project</title>
-  <meta name="description" content="Assets organized for reusability, simplicity and accessibility">
+  <meta name="description" content="Assets organized for reusability, simplicity and accessibility in an iOS project">
   <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
   
 
@@ -15,12 +15,12 @@
     <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
     <nav>
 
-<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
-    class="active">
-    Side notes
-</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
+<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
     >
     Sofware architecture
+</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
+    class="active">
+    Side notes
 </a>
 </nav>
     <main>
@@ -43,6 +43,8 @@
 <li><strong>Graphics</strong>: They contain larger images that are used less frequently than icons, and could depict a character, a company logo, an object, or similar. For instance, the image's name could be &quot;letter_sparks_120x100.png,&quot; representing a letter with sparks around it, and it would be used only in a specific location within the app.</li>
 <li><strong>Backgrounds</strong>: This section contains large images primarily used as backgrounds, but it is not limited to that purpose. These images can also be placed between sections or above other elements. An example of a background image name would be &quot;robot_arm_circles_1200x800.png&quot;, which depicts a large mechanical arm with circles in the background.</li>
 </ol>
+<h2 id="advantage-of-the-three-groups">Advantage of the three groups</h2>
+<p>This approach makes it easier to detect duplication, optimize assets, and even identify similar images with small differences. These images can be sent to the design team for review, to determine if they need those similar images or if they should keep just one. As opposed to a feature-based organization, it simplifies the decision-making process of where to place the image asset, eliminating the need to update the location later if the image needs to be shared or if a feature disappears but the image remains.</p>
 
 
   
