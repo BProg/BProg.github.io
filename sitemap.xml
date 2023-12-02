@@ -7,11 +7,15 @@
         <loc>https://bprog.github.io/architecture/</loc>
     </url>
     <url>
-        <loc>https://bprog.github.io/architecture/part1/</loc>
+        <loc>https://bprog.github.io/architecture/1-the-obvious-way/</loc>
         <lastmod>2023-09-06</lastmod>
     </url>
     <url>
         <loc>https://bprog.github.io/side_notes/</loc>
+    </url>
+    <url>
+        <loc>https://bprog.github.io/side_notes/assets-ios-naming/</loc>
+        <lastmod>2023-11-08</lastmod>
     </url>
     <url>
         <loc>https://bprog.github.io/side_notes/decorator/</loc>

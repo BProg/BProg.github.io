@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motivation </title>
+  <meta name="description" content="This is part 1 of a series of articles about sofware architeture">
+  <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
+  
+
+
+</head>
+<body>
+  <div id="container">
+    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
+    <nav>
+
+<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
+    >
+    Side notes
+</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
+    class="active">
+    Sofware architecture
+</a>
+</nav>
+    <main>
+<section class="card page">
+  <div class="date">2023-09-06</div>
+  <h1>Motivation </h1>
+  <h1 id="the-obvious-way-everyone-try-to-follow">The obvious way everyone try to follow</h1>
+<p>All architectures aim to separate things into three major layers: App, Domain and Data. Other layers can be present in architecture like VIPER for iOS, but those intermediate layer will fall under one of these main three anyway.
+To recap what each layer is</p>
+<ul>
+<li>App - is the entry point in the app, it contain the main function that system uses to start you app, the navigation through the app's screens, entry point of the system events, UI elements with response to user stimuli.</li>
+<li>Domain - code that gathers the required data to be displayed, keeps track of the app's state and updates it in response to events from outside world. The outside world to the domain will be App, and external modules that connect to data base, API or other services.</li>
+<li>Data - facades, gateways and that code that access the data directly from the API, data base or other services.</li>
+</ul>
+<p>That separation is found in any project, be it very well organized or not so well. But because just telling which layer should do what doesn't tell how to write code or how to do the separation in code, it leaves programmers room for many variations of implementations, community is following a template which contains a little bit more details about implementation. In iOS world the templates would be MVC, MVVM, VIPER, Composable, etc. Others would call them architectures, but I do not.</p>
+<p>Templates provides details for just one side of your app's architecture. Actually, chosing the template is part of your app's architure. Len Bass is defining the architecture &quot;The software architecture of a program or computing system is the structure or structures of the system that comprise software elements, the externally visible properties of those elements, and the relationship among them&quot;</p>
+
+
+  
+  
+</section>
+</main>
+    <footer>
+<div class="card">
+Made with <a href="http://getzola.org/">Zola</a>, static site generator in <a href="https://www.rust-lang.org/">Rust</a>.
+</div>
+<div id="license">Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> Licence | <a href="/rss.xml">RSS</a> flux</div>
+<br>
+</footer>
+  </div>
+</body>
+</html>

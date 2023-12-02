@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image assets organisation in an iOS project</title>
+  <meta name="description" content="Assets organized for reusability, simplicity and accessibility">
+  <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
+  
+
+
+</head>
+<body>
+  <div id="container">
+    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
+    <nav>
+
+<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
+    class="active">
+    Side notes
+</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
+    >
+    Sofware architecture
+</a>
+</nav>
+    <main>
+<section class="card page">
+  <div class="date">2023-11-08</div>
+  <h1>Image assets organisation in an iOS project</h1>
+  <h2 id="intro">Intro</h2>
+<p>In many large mobile projects, a variety of pictures, both small and large, are commonly used within the app. As more images are added to the project, it becomes necessary to organize them effectively. However, it is common for developers to overlook proper organization and simply place them in a folder or group them without much thought.</p>
+<h2 id="the-default-method">The default method</h2>
+<p>A common method I have observed is categorizing and labeling them according to their features and usage. This approach aligns with our natural thinking process. Supporters of this method argue that it allows for easy icon switching without requiring code updates, only image changes. However, is this truly advantageous, or is updating the name really a significant issue?</p>
+<h2 id="the-problem-with-feature-based-naming-for-image-assets">The problem with feature based naming for image assets</h2>
+<ol>
+<li><strong>Duplication</strong>: In larger projects, people naturally group everything per feature, including image assets. These groups are created based on existing features. As features grow and designers start to reuse icons in different parts of the project, engineers may not go through the trouble of moving images from one feature group to another or renaming assets. It is often easier and faster to simply refer to an existing image from another feature and continue working.</li>
+<li><strong>Nesting</strong>: Big features can be easier to reason about when they are split into smaller sub-features. Therefore, it might seem that organizing images into sub-folders would be simpler, but it is not unless you establish clear rules and constraints for organizing common assets outside of sub-feature folders.</li>
+</ol>
+<h2 id="the-three-big-groups-icons-graphics-and-backgrounds">The three big groups: Icons, Graphics, and Backgrounds</h2>
+<p>The following approach is one way my team is using in production to manage image assets. I came up with this after realizing that our app had become very disorganized with its assets.</p>
+<ol>
+<li><strong>Icons</strong>: To adhere to the content-based naming approach, name each image according to its content. For example, if an image depicts a crown and has a size of 1x scale with a measurement of 40, the appropriate name would be &quot;crown_40.png.&quot;</li>
+<li><strong>Graphics</strong>: They contain larger images that are used less frequently than icons, and could depict a character, a company logo, an object, or similar. For instance, the image's name could be &quot;letter_sparks_120x100.png,&quot; representing a letter with sparks around it, and it would be used only in a specific location within the app.</li>
+<li><strong>Backgrounds</strong>: This section contains large images primarily used as backgrounds, but it is not limited to that purpose. These images can also be placed between sections or above other elements. An example of a background image name would be &quot;robot_arm_circles_1200x800.png&quot;, which depicts a large mechanical arm with circles in the background.</li>
+</ol>
+
+
+  
+  
+</section>
+</main>
+    <footer>
+<div class="card">
+Made with <a href="http://getzola.org/">Zola</a>, static site generator in <a href="https://www.rust-lang.org/">Rust</a>.
+</div>
+<div id="license">Content under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> Licence | <a href="/rss.xml">RSS</a> flux</div>
+<br>
+</footer>
+  </div>
+</body>
+</html>
