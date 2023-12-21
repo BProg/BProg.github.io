@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Decorator pattern in practice</title>
+  <title>Design | Decorator pattern</title>
   <meta name="description" content="Yet another example of implementing Decorator OOP pattern. The examples are from a real project I have worked at.">
   <link rel="stylesheet" type="text/css" href="https://bprog.github.io/base.css">
   
@@ -12,42 +12,36 @@
 </head>
 <body>
   <div id="container">
-    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;mushroom.png"/>Software mushrooms</h1></a></header>
+    <header><a href="https:&#x2F;&#x2F;bprog.github.io"><h1><img id="title_pic" alt="" src="&#x2F;memcard.webp"/></h1></a></header>
     <nav>
 
-<a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;architecture&#x2F;"
-    >
-    Sofware architecture
-</a><a href="https:&#x2F;&#x2F;bprog.github.io&#x2F;side_notes&#x2F;"
-    class="active">
-    Side notes
-</a>
+
 </nav>
     <main>
 <section class="card page">
   <div class="date">2018-12-03</div>
-  <h1>Decorator pattern in practice</h1>
+  <h1>Design | Decorator pattern</h1>
   <h3 id="intro">Intro</h3>
 <p>In this post, you will see yet another implementation of the decorator pattern. This is a real implementation I used in a project, but here, I reduced and simplified the code. Imagine you don't have any css/html, UIKit, or QT framework and need to implement an UI system. In this simple post, you will implement a simple button rendering system based on OOP pattern: <code>Decorator</code>.</p>
 <p>Possible situations</p>
 <ul>
 <li>Button with a text in center and a border
-<img src="https://bprog.github.io/side_notes/decorator/./button_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/decorator/./button_border.png" alt="decorator-pic" /></li>
 <li>Button with an icon, a text and a border
-<img src="https://bprog.github.io/side_notes/decorator/./button_icon_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/decorator/./button_icon_border.png" alt="decorator-pic" /></li>
 <li>Button with only a text
-<img src="https://bprog.github.io/side_notes/decorator/./button_no_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/decorator/./button_no_border.png" alt="decorator-pic" /></li>
 <li>Kind of a radio button, that has the main title and the radio state title (yes / no)
 When any of this buttons are focused - background is colored in a color (yellow), border (if any) should disappear, text should change its color to black.
-<img src="https://bprog.github.io/side_notes/decorator/./button_radio_border.png" alt="decorator-pic" /></li>
+<img src="https://bprog.github.io/decorator/./button_radio_border.png" alt="decorator-pic" /></li>
 </ul>
 <p>Next I will try to implement only a part af those requirements, but the implementation will leave space to extend.</p>
 <h3 id="decorator-pattern-diagram">Decorator pattern diagram</h3>
 <p>This is the decorator pattern in theory</p>
-<p><img src="https://bprog.github.io/side_notes/decorator/./Decorator_pattern.png" alt="decorator-pic" /></p>
+<p><img src="https://bprog.github.io/decorator/./Decorator_pattern.png" alt="decorator-pic" /></p>
 <h3 id="apply-design">Apply design</h3>
 <p>This is how current requirements get designed using decorator pattern</p>
-<p><img src="https://bprog.github.io/side_notes/decorator/./Buttons_class.png" alt="decorator-buttons" /></p>
+<p><img src="https://bprog.github.io/decorator/./Buttons_class.png" alt="decorator-buttons" /></p>
 <p><em>You can follow in code using https://www.typescriptlang.org/play/. The following code is written in typescript</em>.</p>
 <h4 id="components-used-in-code">Components used in code</h4>
 <p>Secondary components used by buttons and decorator.</p>
